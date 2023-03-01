@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./twitterstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="sectionOne">
+      <div class="blockOne">
+        <div class="blockOneP">
+          <p class="blockOneName">Глеб Фокин</p>
+          <p class="blockOneDate">12.02.2023 12:22</p>
+        </div>
+        <h1 class="blockOneTitle">Это мой первый твитт</h1>
+        <div class="blockOneBottom">
+          <p class="blockOneNr">300</p>
+          <p class="blockOneLike">лайков</p>
+          <img src="./img/inima.png" alt="" />
+        </div>
+      </div>
+      <div class="blockOne">
+        <div class="blockOneP">
+          <p class="blockOneName">Глеб Фокин</p>
+          <p class="blockOneDate">12.02.2023 12:22</p>
+        </div>
+        <h1 class="blockOneTitle">
+          Это совсем другой твитт, в нем много текста. Целых две строчки.
+        </h1>
+        <div class="blockOneBottom">
+          <p class="blockOneNr">300</p>
+          <p class="blockOneLike">лайков</p>
+          <img src="./img/inima.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="sectionTwo">
+      <div class="blockInputs">
+        <div class="blockInputsInput">
+          <input
+            class="blockInputsOne"
+            placeholder="Введите ваше имя"
+            type="text"
+          />
+          <input
+            class="blockInputsTwo"
+            placeholder="Введите ваш твитт"
+            type="text"
+          />
+        </div>
+        <button class="blockInputsButton">Твиттнуть</button>
+      </div>
+    </section>
+    <script type="text/javascript">
+      const nameInput = document.querySelector(".blockInputsOne");
+      const tweetInput = document.querySelector(".blockInputsTwo");
+      const tweetButton = document.querySelector(".blockInputsButton");
+      const tweetSection = document.querySelector(".sectionOne");
+
+      tweetButton.addEventListener("click", () => {
+        const name = nameInput.value.trim();
+        const tweet = tweetInput.value.trim();
+
+        if (!name || !tweet) {
+          alert("Имя или текст незаполнены!");
+          return;
+        }
+
+        const date = new Date().toLocaleString();
+        const newTweet = `
+          <div class="blockOne">
+            <div class="blockOneP">
+              <p class="blockOneName">${name}</p>
+              <p class="blockOneDate">${date}</p>
+            </div>
+            <h1 class="blockOneTitle">${tweet}</h1>
+            <div class="blockOneBottom">
+              <p class="blockOneNr">0</p>
+              <p class="blockOneLike">likes</p>
+              <img src="./img/inima.png" alt="" />
+            </div>
+          </div>
+        `;
+
+        tweetSection.insertAdjacentHTML("afterbegin", newTweet);
+
+        nameInput.value = "";
+        tweetInput.value = "";
+      });
+    </script>
+  </body>
+</html>

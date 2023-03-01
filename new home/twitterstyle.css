@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, black, rgb(13, 13, 13));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.sectionOne {
+  padding-top: 80px;
+}
+
+.blockOne {
+  width: 596px;
+  height: 315px;
+  margin-top: 24px;
+  background: radial-gradient(75.42% 75.42% at 50% 42.37%, rgba(53, 53, 53, 0) 22.92%, #7334ea 100%);
+  filter: drop-shadow(0px 20px 67px rgba(0, 0, 0, 0.08));
+  border-radius: 20px;
+  padding: 20px 20px;
+}
+.blockOneP {
+  display: flex;
+  justify-content: space-between;
+}
+.blockOneName {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+}
+.blockOneDate {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+}
+.blockOneTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  padding-top: 32px;
+}
+.blockOneBottom {
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.blockOneNr {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 120%;
+  color: #ffffff;
+}
+.blockOneLike {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.sectionTwo {
+  padding-top: 48px;
+}
+
+.blockInputs {
+  width: 596px;
+  height: 315px;
+  background: radial-gradient(75.42% 75.42% at 50% 42.37%, rgba(53, 53, 53, 0) 22.92%, #7334ea 100%);
+  filter: drop-shadow(0px 20px 67px rgba(0, 0, 0, 0.08));
+  border-radius: 20px;
+  padding: 20px 20px;
+}
+.blockInputsInput {
+  display: flex;
+  flex-direction: column;
+}
+.blockInputsOne {
+  width: 300px;
+  height: 41px;
+  background: #ffffff;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #999999;
+  border: none;
+}
+.blockInputsTwo {
+  width: 556px;
+  height: 145px;
+  background: #ffffff;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #999999;
+  border: none;
+  margin-top: 12px;
+}
+.blockInputsButton {
+  width: 162px;
+  height: 57px;
+  background: #bcec30;
+  border-radius: 555px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 29px;
+  float: right;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
